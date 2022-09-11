@@ -182,4 +182,14 @@ body {
   .title {
     font-size: 28px;
   }
+
+  /* setting dot to the left if the card is odd */
+  .timeline-card:nth-child(odd) > .info > .title::before {
+    left: -50px;
+  }
+
+  /* setting dot to the right if the card is odd */
+  .timeline-card:nth-child(even) > .info > .title::before {
+    right: -50px;
+  }
 }
