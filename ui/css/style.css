@@ -1,0 +1,183 @@
+body {
+  background-image: url('/ui/img/caricature.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: contain;
+  font-size: 20px;
+}
+
+.content {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255,255,255);
+  background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 70%, rgba(255,255,255,0) 100%);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 8rem;
+}
+
+.curtain {
+  background: white;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1
+}
+
+.curtain img {
+  max-width: calc(100vw - 6rem);
+  max-height: calc(100vh - 6rem);
+}
+
+.logo {
+  width: 65%;
+  padding: 2rem 0;
+}
+
+.menu {
+  width: 65%;
+  padding-left: 1rem;
+}
+
+.menu ul {
+  margin-bottom: 2.5rem;
+}
+
+/* Timeline Container */
+.timeline {
+  width: 65%;
+  padding-left: 2.5rem;
+}
+
+/* Card container */
+.timeline-card {
+  position: relative;
+  padding: 30px;
+}
+
+/* Global ::before */
+.timeline-card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid #C08C5A;
+}
+
+/* Setting the border of top, bottom, left */
+.timeline-card:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Setting the border of top, bottom, right */
+.timeline-card:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.timeline-card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.timeline-card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.timeline-card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+  /*text-align: justify;*/
+}
+
+/* Title of the card */
+.title {
+  font-family: 'Times New Roman';
+  letter-spacing: 1.2px;
+  font-style: italic;
+  color: #99733D;
+  position: relative;
+  font-size: 36px;
+}
+
+/* Timeline dot  */
+.title::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 999px;
+  border: 10px solid #C08C5A;
+  top: 3px;
+}
+
+/* text right if the card is even  */
+.timeline-card:nth-child(even) > .info {
+  text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.timeline-card:nth-child(odd) > .info > .title::before {
+  left: -55px;
+}
+
+/* setting dot to the right if the card is odd */
+.timeline-card:nth-child(even) > .info > .title::before {
+  right: -55px;
+}
+
+.btn {
+  width: fit-content;
+}
+
+.whatsapp {
+  padding: 0;
+  align-self: end;
+}
+
+@media (orientation: portrait) {
+  body {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .timeline {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .timeline-card {
+    padding: 30px 24px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
