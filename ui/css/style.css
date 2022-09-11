@@ -151,11 +151,13 @@ body {
 
 .btn {
   width: fit-content;
+  z-index: 1;
 }
 
 .whatsapp {
   padding: 0;
   align-self: end;
+  border-radius: 13px;
 }
 
 @media (orientation: portrait) {
