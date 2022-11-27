@@ -183,6 +183,16 @@ body {
 }
 
 @media (orientation: portrait) {
+  .content {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255,255,255);
+    background: linear-gradient(120deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 80%, rgba(255,255,255,0) 100%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 8rem;
+  }
+
   body {
     font-size: 16px;
   }
@@ -193,6 +203,16 @@ body {
 
   .logo {
     width: 100%;
+  }
+
+  .menu {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .padded-tab {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .timeline {
