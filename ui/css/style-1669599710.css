@@ -25,7 +25,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1
+  z-index: 2
 }
 
 .curtain img {
@@ -109,6 +109,8 @@ body {
   flex-direction: column;
   border-radius: 10px;
   padding: 10px;
+  z-index: 1;
+  position: relative;
   /*text-align: justify;*/
 }
 
